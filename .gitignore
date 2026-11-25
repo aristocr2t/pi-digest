@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+
+# Build and type output
+dist/
+build/
+*.tsbuildinfo
+
+# Test and coverage output
+coverage/
+.nyc_output/
+test-results/
+
+# Logs and debug output
+*.log
+logs/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Local Pi state
+.pi/
+*.local
+
+# Package archives
+*.tgz
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+
+# OS and system files
+.DS_Store
+Thumbs.db
+desktop.ini

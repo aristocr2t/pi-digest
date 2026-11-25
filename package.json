@@ -1,0 +1,44 @@
+{
+  "name": "pi-digest",
+  "version": "0.1.0",
+  "description": "Pi extension that speaks a short summary of every turn through the platform speech engine or a custom TTS command",
+  "keywords": [
+    "pi-package",
+    "tts",
+    "speech"
+  ],
+  "author": "aristocr2t",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aristocr2t/pi-digest.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.9"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/*.test.ts"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^1.6.1",
+    "@types/node": "^26.6.10",
+    "typebox": "^1.4.7",
+    "typescript": "^6.0.3"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "typebox": "*"
+  },
+  "pi": {
+    "extensions": [
+      "./src/extension.ts"
+    ]
+  }
+}
