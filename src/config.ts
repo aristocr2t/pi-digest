@@ -11,7 +11,7 @@ export const SETTINGS_FILE = join(AGENT_DIR, 'settings.json');
 /** Key this extension owns inside `settings.json`; every other key belongs to Pi. */
 const SETTINGS_KEY = 'pi-digest';
 
-interface TtsSettings {
+interface DigestSettings {
   command?: string;
 }
 
@@ -35,8 +35,8 @@ function findSettings(filePath: string): Record<string, unknown> {
 /** Command template from `settings.json`; absent when the user never set one. */
 export function findCommandTemplate(filePath: string = SETTINGS_FILE): string | undefined {
   const settings = findSettings(filePath);
-  const tts = settings[SETTINGS_KEY];
-  const value = tts && typeof tts === 'object' ? (tts as TtsSettings).command : undefined;
+  const section = settings[SETTINGS_KEY];
+  const value = section && typeof section === 'object' ? (section as DigestSettings).command : undefined;
 
   return typeof value === 'string' && value.trim() ? value : undefined;
 }
@@ -44,8 +44,8 @@ export function findCommandTemplate(filePath: string = SETTINGS_FILE): string | 
 /** Save the template under the extension key and keep every other setting untouched. */
 export function saveCommandTemplate(template: string, filePath: string = SETTINGS_FILE): void {
   const settings = findSettings(filePath);
-  const tts = settings[SETTINGS_KEY];
-  const current = tts && typeof tts === 'object' ? (tts as TtsSettings) : {};
+  const section = settings[SETTINGS_KEY];
+  const current = section && typeof section === 'object' ? (section as DigestSettings) : {};
 
   settings[SETTINGS_KEY] = {
     ...current,

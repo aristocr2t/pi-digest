@@ -42,8 +42,8 @@ export default function piTts(pi: ExtensionAPI): void {
   let enabled = true;
 
   pi.registerTool({
-    name: 'tts',
-    label: 'TTS',
+    name: 'digest',
+    label: 'Digest',
     description:
       'Root agent only; subagent calls are ignored. Speak a concise 1–3 sentence summary. Call last when work is done or human action is needed. Use the user’s language, plain text, and new information only.',
     parameters: Type.Object({

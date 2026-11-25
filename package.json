@@ -1,7 +1,7 @@
 {
   "name": "pi-digest",
-  "version": "0.1.0",
-  "description": "Pi extension that speaks a short summary of every turn through the platform speech engine or a custom TTS command",
+  "version": "0.1.1",
+  "description": "Pi extension that speaks a short digest of every turn through the platform speech engine or a custom command template",
   "keywords": [
     "pi-package",
     "tts",

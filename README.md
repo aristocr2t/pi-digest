@@ -1,6 +1,6 @@
 # pi-digest
 
-Pi extension that speaks a short summary of every turn. The root agent calls the `tts` tool with one to three sentences; the extension queues the text and plays it after the turn ends. Each host uses its own speech engine by default, and a command template replaces it with any TTS program.
+Pi extension that speaks a short digest of every turn. The root agent calls the `digest` tool with one to three sentences; the extension queues the text and plays it after the turn ends. Each host uses its own speech engine by default, and a command template replaces it with any program.
 
 ## Install
 
@@ -30,14 +30,14 @@ pi -e git:github.com/aristocr2t/pi-digest
 | `/digest test` | Speak a test phrase through the current backend |
 | `/digest command` | Print the command and arguments that would run |
 | `/digest command <template>` | Save a custom command template to `settings.json` |
-| `/digest init` | Write the Voice rules for the `tts` tool into `APPEND_SYSTEM.md` |
+| `/digest init` | Write the Voice rules for the `digest` tool into `APPEND_SYSTEM.md` |
 
 `/digest init` adds this section to `~/.pi/agent/APPEND_SYSTEM.md`, replacing a previous `## Voice` section instead of duplicating it:
 
 ```markdown
 ## Voice
 
-When `tts(text)` is available, the root agent calls it last before finishing: on success, on failure, and before reporting a blocker, asking a question, or requesting user action. Use 1–3 plain-text sentences in the user's language with the outcome or blocker and the next step. Subagents skip voice.
+When `digest(text)` is available, the root agent calls it last before finishing: on success, on failure, and before reporting a blocker, asking a question, or requesting user action. Use 1–3 plain-text sentences in the user's language with the outcome or blocker and the next step. Subagents skip voice.
 ```
 
 The rule is a normal file change, so it applies to the next session or after `/reload`.
