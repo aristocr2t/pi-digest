@@ -1,6 +1,6 @@
 {
   "name": "pi-digest",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Pi extension that speaks a short digest of every turn through the platform speech engine or a custom command template",
   "keywords": [
     "pi-package",

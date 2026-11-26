@@ -7,10 +7,10 @@ import { AGENT_DIR } from './config.ts';
 export const PROMPT_FILE = join(AGENT_DIR, 'APPEND_SYSTEM.md');
 const SECTION_PATTERN = /^## Voice[ \t]*$/m;
 
-/** Rules `/digest init` writes; the model speaks only through the `digest` tool. */
+/** Rules `/digest init` writes; the model speaks only through the `voice` tool. */
 export const VOICE_SECTION = `## Voice
 
-When \`digest(text)\` is available, the root agent calls it last before finishing: on success, on failure, and before reporting a blocker, asking a question, or requesting user action. Use 1–3 plain-text sentences in the user's language with the outcome or blocker and the next step. Subagents skip voice.
+When \`voice(text)\` is available, the root agent calls it last before finishing: on success, on failure, and before reporting a blocker, asking a question, or requesting user action. Use 1–3 plain-text sentences in the user's language with the outcome or blocker and the next step. Subagents skip voice.
 `;
 
 /** Put the section in place: replace an existing one, or append it after the other rules. */

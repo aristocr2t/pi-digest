@@ -1,6 +1,6 @@
 # pi-digest
 
-Pi extension that speaks a short digest of every turn. The root agent calls the `digest` tool with one to three sentences; the extension queues the text and plays it after the turn ends. Each host uses its own speech engine by default, and a command template replaces it with any program.
+Pi extension that speaks a short digest of every turn. The root agent calls the `voice` tool with one to three sentences; the extension queues the text and plays it after the turn ends. Each host uses its own speech engine by default, and a command template replaces it with any program.
 
 ## Install
 
@@ -30,7 +30,7 @@ pi -e git:github.com/aristocr2t/pi-digest
 | `/digest test` | Speak a test phrase through the current backend |
 | `/digest command` | Print the command and arguments that would run |
 | `/digest command <template>` | Save a custom command template to `settings.json` |
-| `/digest init` | Write the Voice rules for the `digest` tool into `APPEND_SYSTEM.md` |
+| `/digest init` | Write the Voice rules for the `voice` tool into `APPEND_SYSTEM.md` |
 
 `/digest init` adds this section to `~/.pi/agent/APPEND_SYSTEM.md`, replacing a previous `## Voice` section instead of duplicating it:
 

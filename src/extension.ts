@@ -42,10 +42,10 @@ export default function piTts(pi: ExtensionAPI): void {
   let enabled = true;
 
   pi.registerTool({
-    name: 'digest',
-    label: 'Digest',
+    name: 'voice',
+    label: 'Voice',
     description:
-      'Root agent only; subagent calls are ignored. Speak a concise 1–3 sentence summary. Call last when work is done or human action is needed. Use the user’s language, plain text, and new information only.',
+      'Plays speech through the speaker. Root agent only; subagent calls are ignored. Call it last when work is done or human action is needed, with a concise 1–3 sentence summary. Use the user’s language, plain text, and new information only.',
     parameters: Type.Object({
       text: Type.String({
         description: 'Plain-text outcome and next step in 1–3 sentences, in the user’s language.',
