@@ -37,7 +37,7 @@ pi -e git:github.com/aristocr2t/pi-digest
 ```markdown
 ## Voice
 
-When `digest(text)` is available, the root agent calls it last before finishing: on success, on failure, and before reporting a blocker, asking a question, or requesting user action. Use 1–3 plain-text sentences in the user's language with the outcome or blocker and the next step. Subagents skip voice.
+When `voice(text)` is available, the root agent calls it last before finishing: on success, on failure, and before reporting a blocker, asking a question, or requesting user action. Use 1–3 plain-text sentences in the user's language with the outcome or blocker and the next step. Subagents skip voice.
 ```
 
 The rule is a normal file change, so it applies to the next session or after `/reload`.
